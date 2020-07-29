@@ -1,0 +1,27 @@
+#username_id,#password_id, 
+input[type=text], input[type=password],input[type=email], input[type=date]
+{
+    
+    border-radius: 32px;
+    width: 60%;
+    margin: 10px;
+    padding-left: 10px;
+    height: 30px;
+    border: 1px  solid;
+    font-size: 20px;
+}
+
+.center_login{
+    /* box-sizing: border-box; */
+    /* position: absolute;    */
+    margin-left: 25%;
+}
+.login,.sign_up
+{
+    
+    background-color: #f1f1f1;
+}
+.sign_up
+{
+    margin-left: 35%;
+}

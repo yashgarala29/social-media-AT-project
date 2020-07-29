@@ -1,0 +1,63 @@
+.post{
+    position: fixed;
+    border: 3px solid #f1f1f1;
+    border-radius: 20px;    
+    block-size: initia;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    margin-left: 25%;
+    /* margin-right: 25%; */
+    display: block;
+    background-color: lightblue;
+}
+
+.userdetail
+{
+    /* margin-top: 0px; */
+    
+    border-radius: 20px;
+    background-color:lightcoral;
+}
+.description
+{
+
+    padding: 10px;
+    background-color: lightslategray;
+}
+img.user_profile
+{
+    padding: 10px ;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.username_post
+{   
+    position: fixed;
+    padding-top: 12px;
+    /* text-align:center; */
+    padding-bottom: 1px;
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+}
+.post_data
+{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.comment
+{
+
+}
+.operetion
+{
+    border-top: 1px solid;
+}
+.like
+{
+
+}

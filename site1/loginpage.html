@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/post_block.css">
         <title>login page</title>
     </head>
-    <body>
+    <body class="login">
+        <div class= "center_login" >
         <form action="home.html">
-            <table>
-                <tr>
-                    <th>
-                        username
-                    </th>
-                    <th><input type="text">
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        password
-                    </th>
-                    <th>
-                        <input type="password" name="" id="">
-                    </th>
-                </tr>
-                <tr><th>
+                      <label for="username_id">Username</label><br> 
+                       <input type="text" id="username_id" name="username_name"><br>
+                       <label for="password_id">Password </label><br>
+                       <input type="password" name="password_name" id="password_id"><br>
                         <input type="submit" value="sign in">
-                    </th>
-                    <th> <a href="new_user.html" >sign up</a> </th>
-                </tr>
-
-            </table>
-
+                     <a href="new_user.html" >Sign Up</a> </th>
+               
         </form>
+        <div>
     </body>
 </html>
