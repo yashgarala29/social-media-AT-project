@@ -1,3 +1,4 @@
+
 #username_id,#password_id, 
 input[type=text], input[type=password],input[type=email], input[type=date]
 {
@@ -10,7 +11,18 @@ input[type=text], input[type=password],input[type=email], input[type=date]
     border: 1px  solid;
     font-size: 20px;
 }
-
+.button_class
+{
+    color:white;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+    height: 40px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
+   
+}
 .center_login{
     /* box-sizing: border-box; */
     /* position: absolute;    */

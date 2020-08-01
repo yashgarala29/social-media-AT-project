@@ -2,15 +2,30 @@
 <html>
     <head>
         <title>Add your new post</title>
+        <link rel='stylesheet' type='text/css' media='screen' href='css/block.css'>
+        <link rel="stylesheet" type="text/css" href="css/post_block.css">
+        <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
     </head>
-    <body>
-        
-        <center>
-            <h2>ADD YOUR NEW POST</h2>
-            <hr>
+    <body style="margin: 0px;">
+
+        <div class="navigation">
+            <a href="home.html"  class="navigation_link">Home</a>
+            <a href="add_post.html"  class="navigation_link">Add New Post</a>
+            <!-- <input type="text" class="search_class" placeholder="Search..."> -->
+            <!-- <div style="text-align: center; color: white; width: auto;">ADD YOUR NEW POST</div> -->
+            <input type="submit"   style="margin-top: 10px; float: right;"  class="button_class_logout" value="Logout">
+        </div>
+        <center style="margin-top: 50px;">
+            
             <form method="GET" action="home.html">
-                <input type="file">
-                <input type="submit" value="add_new_post">
+                <label for="file-upload" style="padding-top:14px;" class="custom_file_upload">
+                    File
+                </label>
+                <input id="file-upload"  type="file"/>
+                <br>
+                <br>
+                
+                <input type="submit" class="button_class" value="Post">
             </form>
 
         </center>
