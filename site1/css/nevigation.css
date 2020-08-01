@@ -1,0 +1,21 @@
+.button_class
+{
+    color:white;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+    height: 40px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
+   
+}
+.navigation
+{
+    block-size: auto;
+    background-color:#1e0a38;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    margin: 0px;    
+}
