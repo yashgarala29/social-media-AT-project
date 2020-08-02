@@ -2,14 +2,15 @@
 #username_id,#password_id, 
 input[type=text], input[type=password],input[type=email], input[type=date]
 {
-    
     border-radius: 32px;
     width: 60%;
     margin: 10px;
     padding-left: 10px;
     height: 30px;
-    border: 1px  solid;
+    /* box-sizing: border-box; */
+    border: 1px orchid;
     font-size: 20px;
+    
 }
 .button_class
 {
