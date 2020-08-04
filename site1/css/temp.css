@@ -4,9 +4,9 @@
 	display: flex;
   flex-wrap: nowrap;
   width: 80%;
-  background: #b4d851;
+  /* background: #b4d851; */
   transform: translate(13%,27%);  
-  box-shadow: 20px 20px 20px #443f3f;
+  box-shadow: 20px 20px 50px #443f3f;
 }
 
   .flex-container > div {
@@ -17,7 +17,12 @@
   }
   .flex-container>.other
   {
-	 background: red; 
+    background-image: url("/site1/image/system image/pngocean.png");
+    opacity: 60%;
+    background-color: #17b3a6;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
   }
   .aline
   {
