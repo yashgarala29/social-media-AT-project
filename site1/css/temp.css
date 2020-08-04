@@ -3,58 +3,40 @@
 .flex-container {
 	display: flex;
   flex-wrap: nowrap;
-  margin: auto;
-  /* transform: translate(5%,30%); */
-  /* margin: 100px; */
-  /* width: 30%; */
-  /* background: red; */
-  /* height: 10%; */
-  /* left: 50%; */
-  /* position: absolute; */
-  /* transform: translate(110%,30%); */
-  /* margin-top: 100px; */
-	/* margin-left: 50px; */
-	/* margin-right: 50px; */
+  width: 80%;
+  background: #b4d851;
+  transform: translate(13%,27%);  
+  box-shadow: 20px 20px 20px #443f3f;
 }
 
   .flex-container > div {
 	background-color: #f1f1f1;
-  width: 40%;
-  /* margin: 10px; */
-  /* text-align: center; */
+  width: 100%;
   line-height: 50px;
   font-size: 20px;
   }
   .flex-container>.other
   {
 	 background: red; 
-   /* width: 50%; */
-   /* height: 50%; */
   }
   .aline
   {
-    /* position: absolute; */
-    transform: translate(20%);
-    /* height: 100px; */
+    
+    transform: translate(15%,10%);
   }
   .flex-container>.box
   {
-    /* height: min-content; */
-    /* position: fixed; */
-    /* transform: translate(110%,30%); */
 	background-image: linear-gradient(to left, #17b3a6 , #b4d851);
-	padding: 50px;
-  /* padding-right: 0px; */
+  padding: 5% 5% 15% 0;
+  
 	}
 /* ---------------------------text and password-------------------------- */
   #username_id,#password_id
 {
     border-radius: 32px;
-    /* width: 75%; */
-    /* margin: 10px; */
-    padding-left: 10px;
     height: 30px;
-    /* box-sizing: border-box; */
+    width: 75%;
+    padding: 2px 20px 2px 20px;
     border: 1px orchid;
     font-size: 20px;
 }
