@@ -32,7 +32,7 @@ input[type=text], input[type=password],input[type=email], input[type=date]
 .login,.sign_up
 {
     
-    background-color: #f1f1f1;
+    background-color: whitesmoke;
 }
 .sign_up
 {

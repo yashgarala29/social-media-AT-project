@@ -1,0 +1,74 @@
+
+/* -------------------------code for seprete---------------------- */
+.flex-container {
+	display: flex;
+  flex-wrap: nowrap;
+  margin: auto;
+  /* transform: translate(5%,30%); */
+  /* margin: 100px; */
+  /* width: 30%; */
+  /* background: red; */
+  /* height: 10%; */
+  /* left: 50%; */
+  /* position: absolute; */
+  /* transform: translate(110%,30%); */
+  /* margin-top: 100px; */
+	/* margin-left: 50px; */
+	/* margin-right: 50px; */
+}
+
+  .flex-container > div {
+	background-color: #f1f1f1;
+  width: 40%;
+  /* margin: 10px; */
+  /* text-align: center; */
+  line-height: 50px;
+  font-size: 20px;
+  }
+  .flex-container>.other
+  {
+	 background: red; 
+   /* width: 50%; */
+   /* height: 50%; */
+  }
+  .aline
+  {
+    /* position: absolute; */
+    transform: translate(20%);
+    /* height: 100px; */
+  }
+  .flex-container>.box
+  {
+    /* height: min-content; */
+    /* position: fixed; */
+    /* transform: translate(110%,30%); */
+	background-image: linear-gradient(to left, #17b3a6 , #b4d851);
+	padding: 50px;
+  /* padding-right: 0px; */
+	}
+/* ---------------------------text and password-------------------------- */
+  #username_id,#password_id
+{
+    border-radius: 32px;
+    /* width: 75%; */
+    /* margin: 10px; */
+    padding-left: 10px;
+    height: 30px;
+    /* box-sizing: border-box; */
+    border: 1px orchid;
+    font-size: 20px;
+}
+/* ----------------------------code for button------------------------------ */
+.button_class
+{
+    color:white;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+    height: 40px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
+    margin-right:  50px;
+   
+}
