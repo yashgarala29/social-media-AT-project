@@ -1,4 +1,7 @@
-
+body
+{
+  background: linear-gradient(to right  , #5c6599 ,#7d71aa );
+}
 /* -------------------------code for seprete---------------------- */
 .flex-container {
 	display: flex;
@@ -19,7 +22,7 @@
   {
     background-image: url("/site1/image/system image/pngocean.png");
     opacity: 60%;
-    background-color: #17b3a6;
+    background-color:white;
    background-repeat: no-repeat;
    background-size: cover;
    position: relative;
