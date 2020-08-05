@@ -1,100 +1,22 @@
-body
+input[type=file]
 {
-  background: linear-gradient(to right  , #5c6599 ,#7d71aa );
+    display: none;
 }
-/* -------------------------code for seprete---------------------- */
-.flex-container {
-	display: flex;
-  flex-wrap: nowrap;
-  width: 80%;
-  /* background: #b4d851; */
-  transform: translate(13%,27%);  
-  box-shadow: 20px 20px 50px #443f3f;
-}
-.flex-container1 {
-	display: flex;
-  flex-wrap: nowrap;
-  width: 80%;
-  /* background: #b4d851; */
-  transform: translate(13%,27%);  
-  box-shadow: 20px 20px 50px #443f3f;
-}
-
-  .flex-container > div {
-	background-color: #f1f1f1;
-  width: 100%;
-  line-height: 50px;
-  font-size: 20px;
-  }
-
-  .flex-container1 > div {
-    background-color: #f1f1f1;
-    width: 100%;
-    line-height: 30px;
-    font-size: 20px;
-    }
-    
-  .flex-container>.other
-  {
-    background-image: url( "../image/system image/pngocean.png ");
-    opacity: 60%;
-    background-color:white;
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: relative;
-  }
-  .flex-container1>.other
-  {
-    background-image: url( "../image/system image/pngocean.png ");
-    opacity: 60%;
-    background-color:white;
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: relative;
-  }
-  .aline1
-  {
-    margin-right: 20px;
-    transform: translate(15%);
-  }
-  .aline
-  {
-    
-    transform: translate(15%,10%);
-  }
-  .flex-container>.box
-  {
-    background-image: linear-gradient(to left, #eeeeee , #ffffff);
-	/* background-image: linear-gradient(to left, #17b3a6 , #b4d851); */
-  padding: 5% 5% 15% ;
-  
-  }
-  .flex-container1>.box
-  {
-    background-image: linear-gradient(to left, #eeeeee , #ffffff);
-	/* background-image: linear-gradient(to left, #17b3a6 , #b4d851); */
-  /* padding: 0  15% 0; */
-    /* margin-right: ; */
-  
-	}
-/* ---------------------------text and password-------------------------- */
-  #username_id,#password_id,#first_name_id,#last_name_id,#re_password_id,#email_id,#date_id
-{
-    /* border-radius: 32px; */
-    border:none;
-    border-bottom: 2px solid #0cf164;
-    background-color: initial;
+.custom_file_upload {
+    color:white;
+    display: inline-block;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
     height: 30px;
-    width: 75%;
-    /* color: ; */
-    padding: 2px 20px 2px 20px;
-    /* border: 1px orchid; */
-    font-size: 20px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
 }
-/* ----------------------------code for button------------------------------ */
-.button_class, #signup
+.button_class_logout
 {
     color:white;
+    
     font-weight: 200;
     background-color: darkorchid; 
     background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
@@ -102,23 +24,54 @@ body
     width: 110px;
     border-radius: 32px;
     border: none;
-    margin-right:  50px;
    
 }
-#signup
+.search_class
 {
-  color:white;
-  font-weight: 200;
-  background-color: darkorchid; 
-  background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
-  height: 40px;
-  width: 110px;
-  border-radius: 32px;
-  border: none;
-  margin-right:  50px;
-  margin-bottom: 20px;
+    margin-top:13px;
+    background-color: #f1f1f1;
+    border: none;
+    padding:3px;
+    border-radius: 5px;
+    width: 50px;
+    height: 25px;
 }
-.heading
+.search_class:focus
 {
-  text-align: center;
+    width: 150px;
+    background: white;
+ 
+}
+.navigation_link
+{
+    /* list-style-type: none; */
+    float: left;
+    color:#ffffff;
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+
+}
+.navigation_link:hover
+{
+    color: greenyellow;
+}
+
+.button_class_logout:hover
+{
+    background-color:red; 
+    background-image: linear-gradient(to bottom, red , #d3485a);
+    
+}
+
+.navigation
+{
+    
+    display: block;
+    overflow: hidden;
+    background-color:#352449;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    margin: 0px;    
 }
