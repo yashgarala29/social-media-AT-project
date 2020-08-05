@@ -20,7 +20,7 @@ body
   }
   .flex-container>.other
   {
-    background-image: url("/site1/image/system image/pngocean.png");
+    background-image: url( "../image/system image/pngocean.png ");
     opacity: 60%;
     background-color:white;
    background-repeat: no-repeat;
