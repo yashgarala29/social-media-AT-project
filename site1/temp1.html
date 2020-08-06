@@ -1,21 +1,62 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-First Name: <input type="text" id="myText" class="c" value="Mickey">
 
-<p>Click the button to display the value of the value attribute of the text field.</p>
+    <!DOCTYPE html>
 
-<button onclick="myFunction()">Try it</button>
+    <html lang="en">
 
-<p id="demo"></p>
+    <head>
 
-<script>
-function myFunction() {
-  var x = document.getElementsByClassName("c").value.toUpperCase();
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
+    <meta charset="utf-8">
 
-</body>
-</html>
+    <title>jQuery Get Coordinates of Mouse Pointer</title>
+
+    <style>
+
+        #box{
+
+            width:4000px;
+
+            height:3000px;
+
+            background: #f2f2f2;
+
+            border: 1px solid #000;
+
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $("#box").mousemove(function(event){            
+
+                var relX = event.pageX - $(this).offset().left;
+
+                var relY = event.pageY - $(this).offset().top;
+
+                var relBoxCoords = "(" + relX + "," + relY + ")";
+
+                $(".mouse-cords").text(relBoxCoords);
+
+            });
+
+        });
+
+    </script>
+
+    </head>
+
+    <body>
+
+        <div id="box"></div>
+
+        <p>Coordinates of mouse pointer with respect to the DIV box are: <strong class="mouse-cords"></strong></p>
+
+    </body>
+
+    </html>
+

@@ -1,0 +1,25 @@
+.droupdown
+{
+    text-align: center;
+    display: none;
+    position: absolute;
+}
+.menu>li a {
+    border: 1px solid #5a5555;
+    /* margin-top: -5px;  */
+    width: 160px;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    /* transform: translate(); */
+    display: block
+  }
+.menu {
+    /* height: 225px; */
+    /* width: 160px; */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
