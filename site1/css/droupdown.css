@@ -3,6 +3,7 @@
     text-align: center;
     display: none;
     position: absolute;
+    z-index: 1;
 }
 .menu>li a {
     border: 1px solid #5a5555;
