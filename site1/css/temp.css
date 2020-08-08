@@ -1,22 +1,97 @@
-input[type=file]
+body
 {
-    display: none;
+  background: linear-gradient(to right  , #5c6599 ,#7d71aa );
 }
-.custom_file_upload {
-    color:white;
-    display: inline-block;
-    font-weight: 200;
-    background-color: darkorchid; 
-    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
-    height: 30px;
-    width: 110px;
-    border-radius: 32px;
-    border: none;
+
+
+
+
+.image_class{
+  background-image: url( "../image/system image/pngocean.png ");
+  opacity: 60%;
+  background-color: linear-gradient(to bottom, darkorchid , #3f6deb);
+  background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+
 }
-.button_class_logout
-{
-    color:white;
+/* -------------------------code for seprete---------------------- */
+.flex-container {
+	display: flex;
+  flex-wrap: nowrap;
+  width: 80%;
+  transform: translate(13%,27%);  
+}
+.flex-container1 {
+	display: flex;
+  flex-wrap: nowrap;
+}
+
+  .flex-container > div {
+	background-color: #f1f1f1;
+  width: 100%;
+  line-height: 50px;
+  font-size: 20px;
+ 
+}
+.flex-container1 > div {
+    background-color: #f1f1f1;
+    width: 100%;
+    line-height: 30px;
+    font-size: 20px;
+    }
     
+  .flex-container>.other
+  {
+    background-image: url( "../image/system image/pngocean.png ");
+    background-color: linear-gradient(to bottom, darkorchid , #3f6deb);
+    opacity: 60%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+  }
+  .aline1
+  {
+    margin-right: 20px;
+   
+    visibility: hidden;
+   
+    transform: translate(10%);
+  }
+  .aline
+  {
+    
+    transform: translate(10%,10%);
+  }
+  .flex-container>.box
+  {
+    background-image: linear-gradient(to left, #eeeeee , #ffffff);
+  padding: 1% 0 5% 0;
+  
+  }
+  .flex-container1>.box
+  {
+  
+    opacity: 0;
+    background-color: white;
+    background-image: linear-gradient(to left, #eeeeee , #ffffff);
+  
+	}
+/* ---------------------------text and password-------------------------- */
+  #username_id,#password_id,#first_name_id,#last_name_id,#re_password_id,#email_id,#date_id
+{
+    border:none;
+    border-bottom: 2px solid #0cf164;
+    background-color: initial;
+    height: 30px;
+    width: 75%;
+    padding: 2px 20px 2px 20px;
+    font-size: 20px;
+}
+/* ----------------------------code for button------------------------------ */
+.button_class, #signup
+{
+    color:white;
     font-weight: 200;
     background-color: darkorchid; 
     background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
@@ -24,54 +99,23 @@ input[type=file]
     width: 110px;
     border-radius: 32px;
     border: none;
+    margin-right:  50px;
    
 }
-.search_class
+#signup
 {
-    margin-top:13px;
-    background-color: #f1f1f1;
-    border: none;
-    padding:3px;
-    border-radius: 5px;
-    width: 50px;
-    height: 25px;
+  color:white;
+  font-weight: 200;
+  background-color: darkorchid; 
+  background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+  height: 40px;
+  width: 110px;
+  border-radius: 32px;
+  border: none;
+  margin-right:  50px;
+  margin-bottom: 20px;
 }
-.search_class:focus
+.heading
 {
-    width: 150px;
-    background: white;
- 
-}
-.navigation_link
-{
-    /* list-style-type: none; */
-    float: left;
-    color:#ffffff;
-    text-align: center;
-    padding: 18px 16px;
-    text-decoration: none;
-
-}
-.navigation_link:hover
-{
-    color: greenyellow;
-}
-
-.button_class_logout:hover
-{
-    background-color:red; 
-    background-image: linear-gradient(to bottom, red , #d3485a);
-    
-}
-
-.navigation
-{
-    
-    display: block;
-    overflow: hidden;
-    background-color:#352449;
-    height: 60px;
-    width: 100%;
-    top: 0;
-    margin: 0px;    
+  text-align: center;
 }

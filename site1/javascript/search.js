@@ -3,7 +3,6 @@ function search()
     
     var textinput=document.getElementById("search_id");
     var filter = textinput.value.toUpperCase();
-   
     var ul = document.getElementsByClassName("post");
     
     for (i = 0; i < ul.length; i++) {
