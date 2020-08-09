@@ -2,8 +2,63 @@ body
 {
   background: linear-gradient(to right  , #5c6599 ,#7d71aa );
 }
+.aniamtio_right_to_left1
+{
+  animation-name: move3;
+ animation-duration: 1s;
+animation-fill-mode:both;
+  z-index: 1;
 
+}
+@keyframes move3
+{
+    from {left: 50%; }
+     to {left: 0%; }
+}
+.aniamtio_left_to_right1
+{
+  animation-name: move4;
+  animation-duration: 1s;
+   z-index: -1;
+ 
+}
+@keyframes move4
+{
+    from {right: 50%; }
+     to {right: 0%; }
+}
 
+.aniamtio_left_to_right
+{
+  animation-name: move1;
+ animation-duration: 1s;
+ /* animation-delay: inherit; */
+animation-fill-mode:both;
+/* animation-iteration-count: inherit; */
+  z-index: 1;
+
+}
+@keyframes move1
+{
+    from {right: 50%; }
+     to {right: 0%; }
+}
+.aniamtio_right_to_left 
+{
+  animation-name: move2;
+ animation-duration: 1s;
+ 
+ /* animation-iteration-count: inherit; */
+ /* animation-delay: inherit; */
+/* animation-fill-mode:both; */
+  z-index: 1;
+
+}
+@keyframes move2
+{
+    from {left: 50%; }
+     to {left: 0%; }
+}
 
 
 .image_class{
@@ -13,7 +68,11 @@ body
   background-repeat: no-repeat;
  background-size: cover;
  position: relative;
-
+}
+@keyframes move
+{
+    from {left: 50%; }
+     to {left: 0%; }
 }
 /* -------------------------code for seprete---------------------- */
 .flex-container {
@@ -49,6 +108,7 @@ body
    background-repeat: no-repeat;
    background-size: cover;
    position: relative;
+  
   }
   .aline1
   {
@@ -67,7 +127,7 @@ body
   {
     background-image: linear-gradient(to left, #eeeeee , #ffffff);
   padding: 1% 0 5% 0;
-  
+  position: relative;
   }
   .flex-container1>.box
   {

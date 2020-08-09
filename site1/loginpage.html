@@ -3,11 +3,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/loginsineup.css">
         <script type="text/javascript" src="javascript/loginpage.js"></script>
-        <!-- <link rel="stylesheet" type="text/css" href="css/post_block.css"> -->
-        <!-- <link rel="stylesheet" type="text/css" href="css/nevigation.css"> -->
         <title>login page</title>
-        <!-- <meta name="viewport" content="width=device-width"> -->
-
+        
     </head>
     <body>
 
@@ -21,13 +18,14 @@
                     <label for="password_id">Password </label><br>
                     <input type="password" name="password_name"
                         placeholder="Password..." id="password_id"><br>
-                    <input type="submit" class="button_class" value="sign in">
-                    <input type="button" onclick="addimage(true)" class="button_class" value="sign UP">
+                    <input type="submit" class="button_class" value="sign in"><br>
+                    <div style="font-size: 15px; padding: 0px; margin-top: 10px; margin-bottom: 10px ; line-height: 0px; ">Don't have account yet ?<a onclick="addimage(true)" style="color: blue; font-size: 15px; cursor: pointer;">new Account</a></div>
+                    <div style="font-size: 15px; padding: 0px; margin-top: 20px; line-height: 0px;">Forgot password click <a onclick="" style="color: blue; font-size: 15px; cursor: pointer;">here</a></div>
                 </form>
 
 
             </div>
-            <div class="other">
+            <div class="image_class">
                 <div class="flex-container1">
                     <div class="box">
                         <h2 class="heading">Sgin Up</h2>
@@ -53,7 +51,9 @@
                             <!-- <label for="date_id">Birth Date</label> -->
                             <input type="date" name="date_name" id="date_id"><br>
                             <br>
-                            <input type="button" onclick="addimage(false)" id="signup" value="Creat Account">
+                            <input type="button" 
+                              id="signup" value="Creat Account">
+                            <a style="font-size: 15px; ">I have a account <a onclick="addimage(false)" style="color: blue; font-size: 15px; cursor: pointer;">Login</a></a>
                         </form>
                     </div>
 

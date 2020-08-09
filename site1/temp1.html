@@ -1,62 +1,17 @@
-
-
-    <!DOCTYPE html>
-
-    <html lang="en">
-
-    <head>
-
-    <meta charset="utf-8">
-
-    <title>jQuery Get Coordinates of Mouse Pointer</title>
-
-    <style>
-
-        #box{
-
-            width:4000px;
-
-            height:3000px;
-
-            background: #f2f2f2;
-
-            border: 1px solid #000;
-
-        }
-
-    </style>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
-    <script>
-
-        $(document).ready(function() {
-
-            $("#box").mousemove(function(event){            
-
-                var relX = event.pageX - $(this).offset().left;
-
-                var relY = event.pageY - $(this).offset().top;
-
-                var relBoxCoords = "(" + relX + "," + relY + ")";
-
-                $(".mouse-cords").text(relBoxCoords);
-
-            });
-
-        });
-
-    </script>
-
-    </head>
-
-    <body>
-
-        <div id="box"></div>
-
-        <p>Coordinates of mouse pointer with respect to the DIV box are: <strong class="mouse-cords"></strong></p>
-
-    </body>
-
-    </html>
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/temp1.css'>
+    <script src='javascript/temp.js'></script>
+</head>
+<body>
+    <div class="image_class">
+        <div class="aniamtio_left_to_right image_class1"></div>
+        <input type="button" onclick="a()">
+    </div>
+    <br>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+.image_class{
+  display: flex;
+  transform: translate(500px,500px);
+  background-color: red;
+  }
+  .image_class1{
+    background-image: url( "../image/system image/pngocean.png ");
+    opacity: 60%;
+    background-color: linear-gradient(to bottom, darkorchid , #3f6deb);
+    background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   }
+  @keyframes mymove {
+    
+    from {left: 100%;}
+     to {left: 0%;}
+  }
+  div
+  {
+      height: 200px;
+      width: 200px;
+  }
+  
+.aniamtio_left_to_right
+{
+  animation-name: move1;
+ animation-duration: 1s;
+ /* animation-delay: inherit; */
+animation-fill-mode:both;
+  z-index: 1;
+
+}
+
+@keyframes move1
+{
+    from {right: 50%; }
+     to {right: 0%; }
+}
+.aniamtio_right_to_left
+{
+  animation-name: move2;
+ animation-duration: 1s;
+ /* animation-delay: inherit; */
+animation-fill-mode:forwards;
+  z-index: 1;
+
+}
+@keyframes move2
+{
+    from {left: 50%; }
+     to {left: 0%; }
+}
