@@ -1,61 +1,179 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/temp.css">
-        <script type="text/javascript" src="javascript/temp.js"></script>
-        <title>login page</title>
-        
+        <title>home</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link rel='stylesheet' type='text/css' media='screen' href='css/block.css'>
+         <script type="text/javascript" src="javascript/search.js" ></script>
+         
+        <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="javascript/dropdwon.js" ></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/droupdown.css'>
+
+</body>
+
     </head>
-    <body>
-
-        <div class="flex-container" >
-
-            <div class="box" id="box_id">
-                <form action="home.html" class="aline">
-                    <h2 style="margin-left: 30%;">Sgin in</h2>
-                    <label for="username_id">Email id</label><br>
-                    <input type="text" id="username_id" placeholder="Email id..." name="username_name"><br>
-                    <label for="password_id">Password </label><br>
-                    <input type="password" name="password_name"
-                        placeholder="Password..." id="password_id"><br>
-                    <input type="submit" class="button_class" value="sign in">
-                    <input type="button" onclick="addimage(true)" class="button_class" value="sign UP">
-                </form>
-
-
-            </div>
-            <div class="image_class">
-                <div class="flex-container1">
-                    <div class="box">
-                        <h2 class="heading">Sgin Up</h2>
-                        <form action="loginpage.html" class="aline1">
-
-                            <label for="first_name_id"> Name</label><br>
-
-                            <input type="text" name="first_name"
-                                id="first_name_id" placeholder="Name..."><br>
-                            <label for="password_id"> Password</label><br>
-                            <input type="password" name="password_name"
-                                id="password_id" placeholder="Password..."><br>
-                            <label for="re_password_id">Re Type Password</label><br>
-                            <input type="password" name="re_password_name"
-                                id="re_password_id" placeholder="Re Type Password..."><br>
-
-                            <label for="email_id">Email</label><br>
-
-                            <input type="email" name="email_name" id="email_id"
-                                placeholder="Email..."><br>
-
-                            <label for="date_id">Birth Date</label><br>
-                            <!-- <label for="date_id">Birth Date</label> -->
-                            <input type="date" name="date_name" id="date_id"><br>
-                            <br>
-                            <input type="button" onclick="addimage(false)" id="signup" value="Creat Account">
-                        </form>
-                    </div>
-
-                </div>
-            </div>
+    
+    <body  style="margin: 0px;"  onmousemove="coordinate(event)" onmousedown="dropdown(event)">
+        <div class="navigation" style="margin-bottom: 10px;">
+            <a href="home.html"  class="navigation_link">Home</a>
+            <a href="add_post.html"  class="navigation_link">Add New Post</a>
+            <input type="text" class="search_class" id="search_id" onkeyup="search()" placeholder="Search...">
+            <input type="submit"   style="margin-top: 10px; float: right;"  class="button_class_logout" value="Logout">
         </div>
+        
+        <div class="droupdown" id="droupdown_id" >
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="add_post.html">New Post</a></li>
+                <li><a onclick="window.history.back()" href="">Back</a></li>
+                <li><a onclick="window.history.forward()" href="">Forward</a></li>
+                <li><a onclick="location.reload()" href="">Re Fresh</a></li>
+              </ul>
+              
+        </div>       
+        
+<div class="container-fluid">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-7">
+        <!-- --------------------------------------PHOTO POST------------------------------------------- -->
+            
+        <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">client name 1 </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                <img class="post_data" src="image/system image/1.jpg" style="width: 100%; height: 30rem;" />
+                
+            </div> 
+            <div class="card-footer">
+                <img class="like" src="image/system image/without_like1.jpg" width="30"
+                height="30" />
+            <a onclick=""> <img class="comment"src="image/system image/comment.png" width="30" height="30"/></a>
+        
+            </div>
+          </div>
+          <!-- --------------------------------------------------YOUTUBE VIDEO POST------------------------------- -->
+          <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">yash garala  </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                <iframe class="post_data" style="width: 100%; height: 30rem;" src="https://www.youtube.com/embed/nnZeDt2c8Yo"></iframe>
+                               
+            </div> 
+            <div class="card-footer">
+                <img class="like" src="image/system image/without_like1.jpg" width="30"
+                height="30" />
+            <a onclick=""> <img class="comment"src="image/system image/comment.png" width="30" height="30"/></a>
+        
+            </div>
+          </div>
+          <!-- --------------------------------------------------DESCRIPTION POST------------------------------- -->
+          <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">darsh  </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                <!-- <img class="post_data" src="image/system image/1.jpg" width="400" -->
+                    <!-- height="300" /> -->
+                    <p class="post_data">
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                      
+                      </p>                               
+            </div> 
+            <div class="card-footer">
+                <img class="like" src="image/system image/without_like1.jpg" width="30"
+                height="30" />
+            <a onclick=""> <img class="comment"src="image/system image/comment.png" width="30" height="30"/></a>
+        
+            </div>
+          </div>
+          
+          <!-- -------------------------------------------AUDIO POST-------------------------------------- -->
+          <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">kunj 1 </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                
+                    <audio controls class="post_data" style="width: 100%;">
+                        <source src="audio/audio_1.mp3" type="audio/mp3">
+                      </audio>
+                
+            </div> 
+            <div class="card-footer">
+                <img class="like" src="image/system image/without_like1.jpg" width="30"
+                height="30" />
+            <a onclick=""> <img class="comment"src="image/system image/comment.png" width="30" height="30"/></a>
+        
+            </div>
+
+          </div>
+          <!-- -------------------------------------------END-------------------------------------- -->
+          
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+  
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </body>
+   
 </html>

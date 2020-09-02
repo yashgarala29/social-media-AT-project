@@ -3,7 +3,7 @@ function search()
     
     var textinput=document.getElementById("search_id");
     var filter = textinput.value.toUpperCase();
-    var ul = document.getElementsByClassName("post");
+    var ul = document.getElementsByClassName("card");
     
     for (i = 0; i < ul.length; i++) {
         var a = ul[i].getElementsByClassName("username_post");

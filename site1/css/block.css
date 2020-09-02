@@ -28,14 +28,14 @@
 }
 .user_profile
 {
-    padding: 10px ;
+    
     border-radius: 50%;
     margin-right: 20px;
 }
 .username_post
 {   
     position: absolute;
-    padding-top: 12px;
+    /* padding-top: 12px; */
     /* text-align:center; */
     padding-bottom: 1px;
     color: black;
@@ -48,8 +48,8 @@ p.post_data
     display: block;
     /* align-items: center; */
     overflow: scroll;
-    height: 300px;
-    width: 400px;
+    height: 25vw;
+    width: 100%;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
