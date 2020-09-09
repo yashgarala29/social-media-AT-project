@@ -1,0 +1,25 @@
+.user_image
+{
+    height: 13rem;
+    width: 13rem;
+    /* position:; */
+    border-radius: 10rem;
+    margin-top: 10%;
+    margin-left: 5%;
+    float: left;
+}
+.username_profile
+{
+    margin-top: 17%;
+    /* text-align; */
+    margin-left: 5%;
+    color: white;
+    float: left;
+    /* margin-right: auto; */
+    /* block-size: auto; */
+}
+.profile_view
+{
+    background: linear-gradient(to bottom,#5c6599 70%,#f1f1f1 30%);
+    /* background-size: 0; */
+}

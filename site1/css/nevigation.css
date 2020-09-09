@@ -2,13 +2,33 @@ input[type=file]
 {
     display: none;
 }
+.active1
+{
+    background-color:#0e3c63 ;
+    /* color: white; */
+}
+li>a
+{
+    color: white;
+}
+li>a:hover
+{
+    color:greenyellow ;
+}
+.nav-link1{
+    display:block;
+    /* display: block; */
+    
+}
 .custom_file_upload {
     color:white;
-    display: inline-block;
+    padding-bottom: 4%;
+    text-align: center;
+    /* display: inline-block; */
     font-weight: 200;
     background-color: darkorchid; 
     background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
-    height: 30px;
+    height: 40px;
     width: 110px;
     border-radius: 32px;
     border: none;
@@ -69,7 +89,8 @@ input[type=file]
     
     display: block;
     overflow: hidden;
-    background-color:#352449;
+    background-color:#0e3c63;
+    /* background: linear-gradient(to center  , #133619 ,#847bad ); */
     height: 60px;
     width: 100%;
     top: 0;

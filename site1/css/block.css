@@ -1,4 +1,15 @@
-
+.button_class
+{
+    color:white;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+    height: 40px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
+   
+}
 
 .post{
  
