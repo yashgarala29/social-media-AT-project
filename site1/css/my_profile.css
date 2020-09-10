@@ -8,6 +8,15 @@
     margin-left: 5%;
     float: left;
 }
+.follow
+{
+    margin: 10% 0 3% 2%;
+     padding-top: 10%;
+     /* padding-right: 1%; */
+    text-align: center;
+    display: block;
+    color: #f1f1f1;
+}
 .username_profile
 {
     margin-top: 17%;
