@@ -13,10 +13,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="javascript/dropdwon.js" ></script>
         <link rel="stylesheet" href="css/my_profile.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/droupdown.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='css/droupdown.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
+        <!-- --------------------------edit button ---------------------------------------- -->
+        <link rel='stylesheet' type='text/css' media='screen' href='css/edit.css'>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="jqurey/edit.js"></script>
+        
 
-    <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
-</body>
 
     </head>
     
@@ -56,6 +62,7 @@
             <li class="list-group-item "><a href="help.html" class="text-dark nav-link1"> Help</a></li>
             <li class="list-group-item"><a href="contact_us.html" class="text-dark nav-link1"> contact us</a></li>
             <!-- <li class="list-group-item ">Home</li> -->
+
             <!-- <li class="list-group-item">New Post</li> -->
           </ul>
       </div>
@@ -64,9 +71,8 @@
             <div class="profile_view" style="border: none;"> 
                 <div style="float: left;">
                     <img src="image/system image/smily.jpg" class="user_image" alt="Your profile">
-                    <a class="btn btn-dark" style="margin: 2% 0 3% 22%;">Edit profile</a>
-                    <!-- <a class="btn btn-dark" style="margin: 2% 0 3% 22%;">Edit profile</a> -->
-                            
+                    <!-- <a class="btn btn-dark" style="margin: 2% 0 3% 22%;" data-toggle="modal" data-target="#edit"  >Edit profile</a> -->
+                    <a class="btn btn-dark" style="margin: 2% 0 3% 22%;" data-toggle="modal" data-target="#edit" >Edit profile</a>
                 </div>
                 <div style="float: left;" class="username_profile">
                     <h1 class="card-titel " >Yash Garala</h1>
@@ -86,18 +92,76 @@
     </div>
     </div>
   </div>
-  
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            <!-- ------------------------------------------------------------------  -->
+            <div class="container">
+                <!-- <button type="button" class="button_class" data-toggle="modal" data-target="#edit" > click</button> -->
+            
+                <!-- Modal -->
+                <div class="modal fade" id="edit" role="dialog">
+                  <div class="modal-dialog ">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Edit your profile</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        
+                    </div>
+                      <div class="modal-body">
+                            <form action="loginpage.html" class="aline1">
+                                
+                                <!-- <div class="form-group"> -->
+                                    <label for="file-upload" style="cursor: pointer;">
+                                        <img src="image/system image/smily.jpg" class="user_image_in_edit" alt="Your profile">
+                                    </label>
+                                    <input id="file-upload"  type="file"/>
+                                    
+                                    <!-- <img src="image/system image/smily.jpg" class="user_image_in_edit" alt="Your profile"> -->
+                                    <br>
+                                    <label for="control-label first_name_id"> Name</label><br>
+                                
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" style="cursor: not-allowed;" name="first_name" value="yash garala" id="first_name_id" placeholder="Name..." disabled><br>
+                                        <span class="input-group-addon"><a class="text-success" id="first_name_id_a"><i class="fa fa-pencil"></a></i></span>   
+                                      </div>
+                                
+                                <label for="password_id"> Password</label><br>
+                                <div class="input-group">
+                                    
+                                <input type="password" class="form-control" name="password_name" style="cursor: not-allowed;" value="abc" id="password_id" placeholder="Password..." disabled><br>
+                                <span class="input-group-addon"><a class="text-success" id="password_id_a"><i class="fa fa-pencil"></i></a></span>   
+                            </div>
+                                <label for="re_password_id">Re Type Password</label><br>
+                                <div class="input-group">
+                                    
+                                <input class="form-control" type="password" name="re_password_name" value="abc"  style="cursor: not-allowed;" id="re_password_id" placeholder="Re Type Password..." disabled><br>
+                                <span class="input-group-addon"><a class="text-success" id="re_password_id_a"><i class="fa fa-pencil"></i></a></span>       
+                            </div>
+                                <label for="email_id">Email</label><br>
+                                
+                                <div class="input-group">
+                                    
+                                <input type="email" class="form-control" value="yashgarala29@gmail.com" name="email_name" id="email_id" style="cursor: not-allowed;" placeholder="Email..." disabled><br>
+                                <span class="input-group-addon"><a class="text-success" id="email_id_a"><i class="fa fa-pencil"></i></a></span>   
+                            </div>
+                                <label for="date_id" >Birth Date</label><br>
+                                <!-- <label for="date_id">Birth Date</label> -->
+                                <div class="input-group">
+                                    
+                                <input type="date" class="form-control" value="2000-10-29" name="date_name" id="date_id"  disabled><br>
+                                <span class="input-group-addon"><a class="text-success" id="date_id_a"><i class="fa fa-pencil"></a></i></span>   
+                            </div>
+                                <br>
+                                <input type="submit"  class="button_class" value="Save Change">
+                                </form>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+           
+            <!-- ------------------------------------------------------------------  -->
         
     </body>
    
