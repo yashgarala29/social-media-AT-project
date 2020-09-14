@@ -44,9 +44,45 @@ $(document).ready(function(){
         $("#date_id").removeAttr('disabled')
         $("#date_id_a").remove()
       });
+// -------------password validation-------------
+      $("#re_password_id").on("keyup",function(){
+        var x = $("#password_id").val();
+        var y = $("#re_password_id").val();
+        if(x != y)
+        {
+          $("#re_password_id").addClass("form-control is-invalid")
+        }
+        if(x === y)
+        {
+          // alert("cd")
+          $("#re_password_id").removeClass("form-control is-invalid").addClass("form-control is-valid")
+        }
+       
+      });
+      $("#password_id").on("keyup",function(){
+        var x = $("#password_id").val();
+        var y = $("#re_password_id").val();
+        if(y=="")
+        {
+
+        }
+        else
+        {
+
+         if(x != y)
+          {
+            $("#re_password_id").addClass("form-control is-invalid")
+          }
+          if(x === y)
+          {
+            // alert("cd")
+            $("#re_password_id").removeClass("form-control is-invalid").addClass("form-control is-valid")
+          }
+        }
+      });
         
-    //   var bool=$
   });
+  
 
   
 
