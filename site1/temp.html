@@ -5,98 +5,215 @@
         <link rel='stylesheet' type='text/css' media='screen' href='css/block.css'>
          <script type="text/javascript" src="javascript/search.js" ></script>
          
-        <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
-        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="javascript/dropdwon.js" ></script>
-        <link rel="stylesheet" href="css/my_profile.css">
-        <link rel='stylesheet' type='text/css' media='screen' href='css/droupdown.css'>
-        <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
-        <!-- --------------------------edit button ---------------------------------------- -->
-        <link rel='stylesheet' type='text/css' media='screen' href='css/edit.css'>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="jqurey/edit.js"></script>
-        
-
+    <link rel='stylesheet' type='text/css' media='screen' href='css/droupdown.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/nevigation.css'>
+   <!-- -------------------------------------------for comment-------------------------------------- -->
+   <script src='javascript/a076d05399.js'></script>
+   <script src="jqurey/operetion.js"></script>
+    
+             
+</body>
 
     </head>
     
     <body  style="margin: 0px;"  onmousemove="coordinate(event)" onmousedown="dropdown(event)">
-        <button class="button_class" data-toggle="modal" data-target="#edit" > click</button>
-        <div class="container">
-            <h2>Small Modal</h2>
-            <!-- <button type="button" class="button_class" data-toggle="modal" data-target="#edit" > click</button> -->
+        <div class="navigation" style="margin-bottom: 10px;">
+            <a href="home.html"  class="navigation_link">Home</a>
+            <a href="add_post.html"  class="navigation_link">Add New Post</a>
+            <input type="text" class="search_class" id="search_id" onkeyup="search()" placeholder="Search...">
+            <input type="submit"   style="margin-top: 10px; float: right;"  class="button_class_logout" value="Logout">
+        </div>
         
-            <!-- Modal -->
-            <div class="modal fade" id="edit" role="dialog">
-              <div class="modal-dialog ">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title">Edit your profile</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    
+        <div class="droupdown" id="droupdown_id" >
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="add_post.html">New Post</a></li>
+                <li><a onclick="window.history.back()" href="">Back</a></li>
+                <li><a onclick="window.history.forward()" href="">Forward</a></li>
+                <li><a onclick="location.reload()" href="">Re Fresh</a></li>
+              </ul>
+              
+        </div>       
+        
+<div class="container-fluid">
+    <div class="row">
+      <div class="pre-scrollable position-fixed  col" style="max-height: 90%; max-width:21%;">
+        <ul class="list-group" >
+            <li class="list-group-item active1 "><a  href="home.html">Home</a></li>
+            <li class="list-group-item navbar-nav " ><a class="text-dark nav-link1" href="add_post.html">New Post</a></li>
+            <li class="list-group-item"><a href="my_profile.html" class="text-dark nav-link1"> My profile</a></li>
+            <li class="list-group-item"><a href="find_friend.html" class="text-dark nav-link1"> Find Friends</a></li>
+            <li class="list-group-item"><a href="videos.html" class="text-dark nav-link1"> Video</a></li>
+            <li class="list-group-item "><a href="photos.html" class="text-dark nav-link1"> Photos</a></li>
+            <li class="list-group-item"><a href="audios.html" class="text-dark nav-link1"> Audio</a></li>
+            <li class="list-group-item"><a href="blog.html" class="text-dark nav-link1"> Blog</a></li>
+            <li class="list-group-item"><a href="my_friends.html" class="text-dark nav-link1"> My Friends</a></li>
+            <li class="list-group-item"><a href="about_us.html" class="text-dark nav-link1"> About us</a></li>
+            <li class="list-group-item "><a href="help.html" class="text-dark nav-link1"> Help</a></li>
+            <li class="list-group-item"><a href="contact_us.html" class="text-dark nav-link1"> contact us</a></li>
+           
+          </ul>
+      </div>
+      <div class=" pre-scrollable position-fixed col-7" style="left: 20%;max-height: 100%;">
+        <!-- --------------------------------------PHOTO POST------------------------------------------- -->
+            
+        <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">client name 1 </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                <img class="post_data" src="image/system image/1.jpg" style="width: 75%; height: 25rem;" />
+                
+            </div> 
+            <div class="card-footer" >
+                <a class="btn  active1 btn like"><i class="fa fa-thumbs-up"></i></a>
+                <a class="btn  active1 btn comment" id="comment_photo"><i class="fas fa-comment"></i></i></a>
+                <div class="input-group comment_photo_div_id" style="display:none;margin-top: 01%;">
+                  <input type="text" class="form-control comment_text_class" name="first_name"  id="comment_text_id_photo" placeholder="Comment..."><br>
+                  <span class="input-group-addon"><a class="btn active_send" id="first_name_id_a"><i class="fa fa-paper-plane"></a></i></span>   
+                                     
                 </div>
-                  <div class="modal-body">
-                        <form action="loginpage.html" class="aline1">
-                            
-                            <!-- <div class="form-group"> -->
-                                <label for="file-upload" style="cursor: pointer;">
-                                    <img src="image/system image/smily.jpg" class="user_image_in_edit" alt="Your profile">
-                                </label>
-                                <input id="file-upload"  type="file"/>
-                                
-                                <!-- <img src="image/system image/smily.jpg" class="user_image_in_edit" alt="Your profile"> -->
-                                <br>
-                                <label for="control-label first_name_id"> Name</label><br>
-                            
-                                <div class="input-group">
-                                    <input type="text" class="form-control" style="cursor: not-allowed;" name="first_name" value="yash garala" id="first_name_id" placeholder="Name..." disabled><br>
-                                    <span class="input-group-addon"><a class="text-success" id="first_name_id_a"><i class="fa fa-pencil"></a></i></span>   
-                                  </div>
-                            
-                            <label for="password_id"> Password</label><br>
-                            <div class="input-group">
-                                
-                            <input type="password" class="form-control" name="password_name" style="cursor: not-allowed;" value="abc" id="password_id" placeholder="Password..." disabled><br>
-                            <span class="input-group-addon"><a class="text-success" id="password_id_a"><i class="fa fa-pencil"></i></a></span>   
-                        </div>
-                            <label for="re_password_id">Re Type Password</label><br>
-                            <div class="input-group">
-                                
-                            <input class="form-control" type="password" name="re_password_name" value="abc"  style="cursor: not-allowed;" id="re_password_id" placeholder="Re Type Password..." disabled><br>
-                            <span class="input-group-addon"><a class="text-success" id="re_password_id_a"><i class="fa fa-pencil"></i></a></span>       
-                        </div>
-                            <label for="email_id">Email</label><br>
-                            
-                            <div class="input-group">
-                                
-                            <input type="email" class="form-control" value="yashgarala29@gmail.com" name="email_name" id="email_id" style="cursor: not-allowed;" placeholder="Email..." disabled><br>
-                            <span class="input-group-addon"><a class="text-success" id="email_id_a"><i class="fa fa-pencil"></i></a></span>   
-                        </div>
-                            <label for="date_id" >Birth Date</label><br>
-                            <!-- <label for="date_id">Birth Date</label> -->
-                            <div class="input-group">
-                                
-                            <input type="date" class="form-control" value="2000-10-29" name="date_name" id="date_id"  disabled><br>
-                            <span class="input-group-addon"><a class="text-success" id="date_id_a"><i class="fa fa-pencil"></a></i></span>   
-                        </div>
-                            <br>
-                            <input type="submit"  class="button_class" value="Save Change">
-                            </form>
-                    
-                  </div>
-                  
-                </div>
-              </div>
+          
             </div>
           </div>
+          <!-- --------------------------------------------------YOUTUBE VIDEO POST------------------------------- -->
+          <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">yash garala  </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                <iframe class="post_data" style="width: 100%; height: 30rem;" src="https://www.youtube.com/embed/nnZeDt2c8Yo"></iframe>
+                               
+            </div> 
+            <div class="card-footer" >
+              <a class="btn  active1 btn like"><i class="fa fa-thumbs-up"></i></a>
+              <a class="btn  active1 btn comment" id="comment_video"><i class="fas fa-comment"></i></i></a>
+              <div class="input-group comment_video_div_id" style="display:none;margin-top: 01%;">
+                <input type="text" class="form-control comment_text_class" name="first_name"  id="comment_text_id_video" placeholder="Comment..."><br>
+                <span class="input-group-addon"><a class="btn active_send" id="first_name_id_a"><i class="fa fa-paper-plane"></a></i></span>   
+              </div>
+        
+            </div>
+          </div>
+          <!-- --------------------------------------------------DESCRIPTION POST------------------------------- -->
+          <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">darsh  </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                <!-- <img class="post_data" src="image/system image/1.jpg" width="400" -->
+                    <!-- height="300" /> -->
+                    <p class="post_data">
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                        Featured snippet from the web Advanced technology is 
+                        defined as a new or developing IT innovation that still
+                        has relatively few users, yet promises to provide future,
+                        significant value. While this term differs from both advanced
+                         manufacturing and manufacturing technology, they have 
+                        relationships with one another.
+                      
+                      </p>                               
+            </div> 
+            <div class="card-footer" >
+              <a class="btn  active1 btn like"><i class="fa fa-thumbs-up"></i></a>
+              <a class="btn  active1 btn comment" id="comment_text"><i class="fas fa-comment"></i></i></a>
+              <div class="input-group comment_text_div_id" style="display:none;margin-top: 01%;">
+                <input type="text" class="form-control comment_text_class" name="first_name"  id="comment_text_id_photo" placeholder="Comment..."><br>
+                <span class="input-group-addon"><a class="btn active_send" id="first_name_id_a"><i class="fa fa-paper-plane"></a></i></span>   
+                                   
+              </div>
+        
+          </div>
+          </div>
           
+          <!-- -------------------------------------------AUDIO POST-------------------------------------- -->
+          <div class="card border-primary" style="margin-bottom: 1%;">
+            <div class="card-header"  style="border-bottom-style:solid;">
+                    <img src="image/system image/smily.jpg" class="user_profile"
+                        width="30px" height="30px">
+                   <a href="#" class="card-link username_post ">kunj 1 </a>
+               </div>
+            <div class="card-body">
+                <p class="description">this is example of image</p>
+                
+                    <audio controls class="post_data" style="width: 100%;">
+                        <source src="audio/audio_1.mp3" type="audio/mp3">
+                      </audio>
+                
+            </div> 
+            <div class="card-footer" >
+              <a class="btn  active1 btn like"><i class="fa fa-thumbs-up"></i></a>
+              <a class="btn  active1 btn comment" id="comment_audio"><i class="fas fa-comment"></i></i></a>
+              <div class="input-group comment_audio_div_id" style="display:none;margin-top: 01%;">
+                <input type="text" class="form-control comment_text_class" name="first_name"  id="comment_text_id_photo" placeholder="Comment..."><br>
+                <span class="input-group-addon"><a class="btn active_send" id="first_name_id_a"><i class="fa fa-paper-plane"></a></i></span>   
+                                   
+              </div>
+        
+          </div>
+          </div>
+           <div style="margin-top: 10%;"></div>
+          <!-- -------------------------------------------END-------------------------------------- -->
           
+      </div>
+      <div class="position-fixed  col overflow-hidden" style=" max-height: 100%;max-width:21%; right: 0;">
+       
+    </div>
+
+      </div>
+      
+    </div>
+  </div>
+  
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     </body>
    

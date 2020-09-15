@@ -81,12 +81,12 @@ p.post_data
 }
 .comment
 {
-    /* padding-right: 33%; */
+    
     position: absolute;
-    /* right: 33% ; */
-    /* right: 0px; */
-    right: 33%;
-    /* padding-right: 33%; */
+    
+    right: 30%;
+    
+    
 }
 .operetion
 {
@@ -97,9 +97,7 @@ p.post_data
 }
 .like
 {
-    /* position: absolute; */
-    /* padding-right: 30%; */
-    padding-left: 33%;
-    /* position: absolute; */
-    /* left: 33%; */
+    
+    margin-left: 25%;
+    
 }
