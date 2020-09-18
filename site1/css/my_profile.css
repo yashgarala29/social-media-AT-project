@@ -1,9 +1,9 @@
 .user_image
 {
-    height: 13rem;
-    width: 13rem;
+    height: 200px;
+    width: 200px;
     /* position:; */
-    border-radius: 10rem;
+    border-radius: 300px;
     margin-top: 10%;
     margin-left: 5%;
     float: left;
