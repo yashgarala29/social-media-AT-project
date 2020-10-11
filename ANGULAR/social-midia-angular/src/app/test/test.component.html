@@ -1,0 +1,20 @@
+<h1 appHihlight>THIS IS YASH GARALA</h1>
+
+----------------------------------------------------
+<input [(ngModel)]="username" >
+<p>hello {{username}}</p>
+----------------------------------------------------
+<p>test works!</p>
+<div>
+    <h1 [class]="isTrue">This class binding is for true value</h1>
+    <h1 [id]="isTrue">This class binding is for false value</h1>
+    </div>
+    <div>
+    <span [style.font-size.px]="isTrue1? 20 : 12">This style binding is set for true value</span>
+    <span [style.font-size.%]="!isTrue1? 120 : 30">This style binding is set for false value</span>
+    </div>
+    <h2 [ngStyle] ="titleStyles">Style Binding 4</h2>
+
+<button on-click = "onSave($event)">Save</button>
+
+<input type="text" (keyup)='onKeyUp($event)'>
