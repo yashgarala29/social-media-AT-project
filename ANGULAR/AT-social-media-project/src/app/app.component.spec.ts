@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'social-midia-angular'`, () => {
+  it(`should have as title 'AT-social-media-project'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('social-midia-angular');
+    expect(app.title).toEqual('AT-social-media-project');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('social-midia-angular app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('AT-social-media-project app is running!');
   });
 });

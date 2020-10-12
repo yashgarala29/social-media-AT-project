@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "social-midia-angular": {
+    "AT-social-media-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/social-midia-angular",
+            "outputPath": "dist/AT-social-media-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "social-midia-angular:build"
+            "browserTarget": "AT-social-media-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "social-midia-angular:build:production"
+              "browserTarget": "AT-social-media-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "social-midia-angular:build"
+            "browserTarget": "AT-social-media-project:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "social-midia-angular:serve"
+            "devServerTarget": "AT-social-media-project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "social-midia-angular:serve:production"
+              "devServerTarget": "AT-social-media-project:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "social-midia-angular"
+  "defaultProject": "AT-social-media-project"
 }
