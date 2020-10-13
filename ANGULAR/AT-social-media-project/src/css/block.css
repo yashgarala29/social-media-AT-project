@@ -1,0 +1,103 @@
+.button_class
+{
+    color:white;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+    height: 40px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
+   
+}
+
+.post{
+ 
+    /* border: 3px solid #f1f1f1; */
+    border-radius: 20px;    
+    block-size: initia;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    margin-left: 25%;
+    /* margin-right: 25%; */
+    display: block;
+    background-color:#f1f1f1;
+   
+}
+
+.userdetail
+{
+    /* margin-top: 0px; */
+    
+    border-radius: 20px;
+    background-color:#c2b3b3;
+}
+.description
+{
+
+    padding: 10px;
+
+}
+.user_profile
+{
+    
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.username_post
+{   
+    position: absolute;
+    /* padding-top: 12px; */
+    /* text-align:center; */
+    padding-bottom: 1px;
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+}
+p.post_data
+{
+    align-content: flex-start;
+    display: block;
+    /* align-items: center; */
+    overflow: scroll;
+    height: 25vw;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.post_data
+{
+    display: block;
+    overflow: scroll;
+    /* height: 300px; */
+    /* width: 400px; */
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.comment
+{
+    
+    position: absolute;
+    
+    right: 30%;
+    
+    
+}
+.operetion
+{
+    margin-top: 20px;
+    /* position: absolute; */
+    block-size: auto;
+    border-top: 1px solid;
+}
+.like
+{
+    
+    margin-left: 25%;
+    
+}

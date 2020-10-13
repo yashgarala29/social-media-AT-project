@@ -1,0 +1,15 @@
+#username_id,#password_id,#first_name_id,#last_name_id,#re_password_id,#email_id,#date_id
+{
+    border:none;
+    border-bottom: 2px solid #0cf164;
+    background-color: initial;
+    height: 30px;
+    width: 90%;
+    padding: 2px 20px 2px 2px;
+    font-size: 20px;
+}
+.user_image_in_edit
+{
+    height: 9rem;
+    width: 9rem;
+}

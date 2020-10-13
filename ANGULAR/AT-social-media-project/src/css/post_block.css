@@ -1,0 +1,40 @@
+
+#username_id,#password_id, 
+input[type=text], input[type=password],input[type=email], input[type=date]
+{
+    border-radius: 32px;
+    width: 60%;
+    margin: 10px;
+    padding-left: 10px;
+    height: 30px;
+    /* box-sizing: border-box; */
+    border: 1px orchid;
+    font-size: 20px;
+    
+}
+.button_class
+{
+    color:white;
+    font-weight: 200;
+    background-color: darkorchid; 
+    background-image: linear-gradient(to bottom, darkorchid , #3f6deb);
+    height: 40px;
+    width: 110px;
+    border-radius: 32px;
+    border: none;
+   
+}
+.center_login{
+    /* box-sizing: border-box; */
+    /* position: absolute;    */
+    margin-left: 25%;
+}
+.login,.sign_up
+{
+    
+    background-color: whitesmoke;
+}
+.sign_up
+{
+    margin-left: 35%;
+}
