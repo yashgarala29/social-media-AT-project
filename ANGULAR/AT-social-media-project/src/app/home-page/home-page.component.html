@@ -1,1 +1,43 @@
-<!-- <app-navigation-bar></app-navigation-bar> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="pre-scrollable position-fixed col" style="max-height: 90%;
+            max-width:21%;">
+            <ul class="list-group">
+                <li class="list-group-item navbar-nav" routerLinkActive="active1"><a class="nav-link1"
+                 routerLink="/home">Home</a></li>
+                <li class="list-group-item navbar-nav" routerLinkActive="active1">
+                <a class=" nav-link1"  routerLink="/new_post"  >New Post</a> </li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/my_profile" class="nav-link1"> My profile</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/find_feiend" class="nav-link1"> Find Friends</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/video" class="nav-link1"> Video</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/photos" class="nav-link1"> Photos</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/audio" class=" nav-link1"> Audio</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/blog" class=" nav-link1"> Blog</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/myfriend" class=" nav-link1"> My Friends</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/about_us" class=" nav-link1"> About us</a></li>
+                <li class="list-group-item" routerLinkActive="active1" >
+                <a routerLink="/help" class=" nav-link1"> Help</a></li>
+                <li class="list-group-item" routerLinkActive="active1">
+                <a routerLink="/contact_us" class="nav-link1"> contact us</a></li>
+
+            </ul>
+        </div>
+        <div class="pre-scrollable position-fixed col-7" style="left:
+            20%;max-height: 100%;">
+                <router-outlet></router-outlet>
+        </div>
+        <div class="position-fixed col overflow-hidden" style="max-height:
+            100%;max-width:21%; right: 0;">
+
+        </div>
+    </div>
+</div>

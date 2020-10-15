@@ -6,10 +6,59 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
+  addClass:boolean=false
+  class_name:string="text-dark"
   constructor() { }
 
   ngOnInit(): void {
+  }
+  home()
+  {
+
+  }
+  new_post()
+  {
+
+  }
+  my_profile()
+  {
+
+  }
+  find_feiend()
+  {
+
+  }
+  video()
+  {
+
+  }
+  photos()
+  {
+
+  }
+  audio()
+  {
+
+  }
+  blog()
+  {
+
+  }
+  myfriend()
+  {
+
+  }
+  about_us()
+  {
+
+  }
+  help()
+  {
+
+  }
+  contact_us()
+  {
+    
   }
 
 }

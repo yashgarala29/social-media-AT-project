@@ -11,15 +11,20 @@ input[type=file]
     background-color:#0e3c63 ;
     color: white;
 }
-.active1:hover
+.active1>.nav-link1
 {
+    all: unset;
+    color: white;
     
+}
+.active1:hover , .active1:hover> .nav-link1
+{
+    cursor: pointer;
     color:greenyellow ;
 }
 /* ------------------comment send--------------- */
 .active_send
 {
-    /* border-bottom: #0cf164; */
     background-color: #0e3c63;
     color: white ;
 }
@@ -31,16 +36,10 @@ input[type=file]
 }
 
 
-li>a
-{
-    color: white;
-}
-li>a:hover
-{
-    color:greenyellow ;
-}
 .nav-link1{
+    /* all: unset; */
     display:block;
+    color: black;
     /* display: block; */
     
 }
