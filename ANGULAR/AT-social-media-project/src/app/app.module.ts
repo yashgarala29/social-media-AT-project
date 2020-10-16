@@ -17,7 +17,8 @@ import { PostBlogComponent } from './post-blog/post-blog.component';
 import { MyfriendComponent } from './myfriend/myfriend.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HelpComponent } from './help/help.component';
-import { ContactUsComponent } from './contact-us/contact-us.component'
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { LoginRegistetionComponent } from './login-registetion/login-registetion.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component'
     MyfriendComponent,
     AboutUsComponent,
     HelpComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    LoginRegistetionComponent
   ],
   imports: [
     BrowserModule,
