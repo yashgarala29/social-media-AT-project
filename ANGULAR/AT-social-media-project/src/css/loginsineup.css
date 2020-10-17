@@ -62,7 +62,7 @@ animation-fill-mode:both;
 
 
 .image_class{
-  background-image: url( "../image/system image/pngocean.png ");
+  background-image: url( "../assets/loginregister/pngocean.png");
   opacity: 60%;
   background-color: linear-gradient(to bottom, darkorchid , #3f6deb);
   background-repeat: no-repeat;
@@ -102,7 +102,7 @@ animation-fill-mode:both;
     
   .flex-container>.other
   {
-    background-image: url( "../image/system image/pngocean.png ");
+    background-image: url( "../assets/loginregister/pngocean.png");
     background-color: linear-gradient(to bottom, darkorchid , #3f6deb);
     opacity: 60%;
    background-repeat: no-repeat;

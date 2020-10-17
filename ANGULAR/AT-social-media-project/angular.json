@@ -26,7 +26,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/javascript/loginpage.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,7 +92,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/javascript/loginpage.js"]
           }
         },
         "lint": {

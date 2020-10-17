@@ -16,8 +16,12 @@ import { MyfriendComponent } from './myfriend/myfriend.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HelpComponent } from './help/help.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { LoginRegistetionComponent } from './login-registetion/login-registetion.component';
 
 const routes: Routes=[
+  // { path: '', redirectTo: 'loginredister', pathMatch: 'full' },
+  { path: 'loginredister',component:LoginRegistetionComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',component:FirstPageComponent},
   { path: 'new_post',component:AddNewPostComponent},
   { path: 'my_profile',component:MyProfileComponent},
