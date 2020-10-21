@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AT-social-media-project';
-  authService:boolean=false
+  authService:boolean=true
 }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileUploadModule } from 'ng2-file-upload';
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
@@ -8,7 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import{MatIconModule} from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { FirstPageComponent } from './first-page/first-page.component';
-import { AddNewPostComponent } from './add-new-post/add-new-post.component';
+// import { AddNewPostComponent } from './add-new-post/add-new-post.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { FindFeiendComponent } from './find-feiend/find-feiend.component';
 import { PostVideoComponent } from './post-video/post-video.component';
@@ -24,13 +25,14 @@ import {EmployeeCreateComponent } from './temp/temp.component'
 import { commonService } from './common.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AddNewPostComponent } from './add-new-post/add-new-post.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
     HomePageComponent,
     FirstPageComponent,
-    AddNewPostComponent,
+    // AddNewPostComponent,
     MyProfileComponent,
     FindFeiendComponent,
     PostVideoComponent,
@@ -42,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     HelpComponent,
     ContactUsComponent,
     LoginRegistetionComponent,
-    EmployeeCreateComponent
+    EmployeeCreateComponent,
+    AddNewPostComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FileUploadModule
 
   ],
   exports:[MatIconModule],

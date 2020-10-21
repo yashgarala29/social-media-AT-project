@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema
 let user_post = new Schema({
+   user_post_file:
+   {
+      type:String
+      
+   },
    user_id: {
       type: String
    },

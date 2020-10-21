@@ -62,7 +62,7 @@ export class commonService {
   // Create
   createuser_post(data): Observable<any> {
     let url = `${this.userpostUri}/create`;
-    return this.http.post(url, data)
+    return this.http.post(url,data)
       .pipe(
         catchError(this.errorMgmt)
       )
@@ -111,7 +111,7 @@ export class commonService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    console.log(errorMessage);
+    // console.log(errorMessage);
     return throwError(errorMessage);
   }
 
