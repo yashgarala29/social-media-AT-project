@@ -48,7 +48,9 @@ export class AddNewPostComponent implements OnInit,AfterViewInit{
     this.submitted = true;
     const formData = new FormData();
     formData.append('file_uplode', this.new_user_post.get('file_uplode').value);
-    formData.append('description', this.new_user_post.get('description').value);  
+    formData.append('description', this.new_user_post.get('description').value); 
+    formData.append('user_id', "this is user id2222222222222222222"); 
+    formData.append('user_name', "this is user name 22222222222222");  
     if (!this.new_user_post.valid) {
       console.log("inside if");
       return false;

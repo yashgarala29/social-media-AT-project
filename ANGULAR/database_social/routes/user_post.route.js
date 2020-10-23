@@ -35,10 +35,10 @@ user_postRoute.post('/create',upload.single('file_uplode'),(req, res, next) => {
   console.log(req.body.file_uplode)
   var obj = new user_post({ 
     description: req.body.description, 
-    user_id:"this is user id", 
-    user_name:"this is user name",
+    user_id:req.body.user_id, 
+    user_name:req.body.user_name,
     user_post_date:Date.now(),
-    like:0,
+    like:[],
     user_post_file_name:url+'/uploads/'+req.file.filename,
     // req.body.file_uplode.name,
     user_post_file_type:req.file.mimetype

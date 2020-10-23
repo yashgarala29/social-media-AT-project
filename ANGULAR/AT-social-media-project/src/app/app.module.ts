@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileUploadModule } from 'ng2-file-upload';
+import { CommonModule } from "@angular/common";
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
@@ -49,6 +50,7 @@ import { AddNewPostComponent } from './add-new-post/add-new-post.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     MatIconModule,
     AppRoutingModule,
     FormsModule, 

@@ -26,6 +26,7 @@ export class commonService {
 
   // Get all user_details
   getuser_details() {
+    console.log("this.http.get(`${this.userdetailUri}`)"+this.http.get(`${this.userdetailUri}`))
     return this.http.get(`${this.userdetailUri}`);
   }
 

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 let user_post = new Schema({
    user_post_file:
    {
-      type:String
+      type:Buffer
       
    },
    user_id: {
@@ -19,7 +19,7 @@ let user_post = new Schema({
       type: Date,default:Date.now
    },
    like: {
-      type: Number
+      type: []
    },
    description:
    {
