@@ -1,1 +1,25 @@
-<p>post-video works!</p>
+<!-- {{userpost[0].user_post_file}} -->
+<div *ngFor="let post of userpost.slice().reverse()  ; let i = index">
+    <div *ngIf="post.user_post_file_type.indexOf('video')>-1">
+    <div class="card border-primary" style="margin-bottom: 1%;">
+        <div class="card-header"  style="border-bottom-style:solid;">
+            <img src="../../image/system image/smily.jpg" class="user_profile"
+                width="30px" height="30px">
+           <a href="#" class="card-link username_post.re ">{{post.user_name}}  </a>
+       </div>
+       <div class="card-body">
+            <p class="description">{{post.description}}</p>
+            
+            <video width="320" height="240" autoplay>
+                <source src={{post.user_post_file_name}} type="{{post.user_post_file_type}}">
+                Your browser does not support the video tag.
+            </video>
+          
+         </div>
+        <div class="card-footer" >
+            <a class="btn  active1 btn like"><i class="fa fa-thumbs-up"></i></a>
+            <a class="btn  active1 btn comment" id="comment_video"><i class="fas fa-comment"></i></a>
+        </div>
+    </div>
+</div>
+</div>

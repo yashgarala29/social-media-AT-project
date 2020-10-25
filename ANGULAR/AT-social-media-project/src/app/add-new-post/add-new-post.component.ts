@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { CookieService } from 'ngx-cookie-service';
 import { commonService } from '../common.service';
 @Component({
   selector: 'app-add-new-post',
@@ -15,7 +17,7 @@ export class AddNewPostComponent implements OnInit,AfterViewInit{
     private router:Router,
     private ngZone:NgZone,
     private commonservice:commonService,
-    
+    private co:CookieService,
     ) { this.mainForm()}
     mainForm()
     {
@@ -49,8 +51,9 @@ export class AddNewPostComponent implements OnInit,AfterViewInit{
     const formData = new FormData();
     formData.append('file_uplode', this.new_user_post.get('file_uplode').value);
     formData.append('description', this.new_user_post.get('description').value); 
-    formData.append('user_id', "this is user id2222222222222222222"); 
-    formData.append('user_name', "this is user name 22222222222222");  
+    formData.append('user_id', this.co.get('login_user_id')); 
+    formData.append('user_name', this.co.get('login_user_name'));
+      
     if (!this.new_user_post.valid) {
       console.log("inside if");
       return false;

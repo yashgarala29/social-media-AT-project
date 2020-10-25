@@ -17,14 +17,12 @@ let user_detail = new Schema({
    },
    followers:[
       {
-         followers_id:String,
-         followers_email:String
+         followers_id:String
       }
    ],
    following:[
       {
-         following_id:String,
-         following_email:String
+         following_id:String
       }
    ]
 }, {

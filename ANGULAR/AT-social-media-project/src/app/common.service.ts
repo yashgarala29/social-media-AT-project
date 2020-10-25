@@ -15,6 +15,15 @@ export class commonService {
 
   constructor(private http: HttpClient) { }
 //--------------------- user_detail----------------------------
+// authentication
+user_authen(data):Observable<any> {
+  let url = `${this.userdetailUri}/user_authen`;
+  // console.log(data.getAll())
+  return this.http.post(url,data)
+    .pipe(
+      catchError(this.errorMgmt)
+    )
+}
   // Create
   createuser_detail(data): Observable<any> {
     let url = `${this.userdetailUri}/create`;
@@ -37,6 +46,14 @@ export class commonService {
       map((res: Response) => {
         return res || {}
       }),
+      catchError(this.errorMgmt)
+    )
+  }
+  //22222222222222222222222222
+  add_followe(data): Observable<any> {
+    let url = `${this.userdetailUri}/add_follow`;
+    console.log(data.get('foll'))
+    return this.http.post(url,data).pipe(
       catchError(this.errorMgmt)
     )
   }

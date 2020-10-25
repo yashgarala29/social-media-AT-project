@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileUploadModule } from 'ng2-file-upload';
 import { CommonModule } from "@angular/common";
+import{CookieService} from 'ngx-cookie-service'
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
@@ -27,6 +28,8 @@ import { commonService } from './common.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AddNewPostComponent } from './add-new-post/add-new-post.component';
+import { from } from 'rxjs';
+import { LogoutComponent } from './logout/logout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,8 @@ import { AddNewPostComponent } from './add-new-post/add-new-post.component';
     ContactUsComponent,
     LoginRegistetionComponent,
     EmployeeCreateComponent,
-    AddNewPostComponent
+    AddNewPostComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,7 @@ import { AddNewPostComponent } from './add-new-post/add-new-post.component';
   ],
   exports:[MatIconModule],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  providers: [commonService],
+  providers: [commonService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

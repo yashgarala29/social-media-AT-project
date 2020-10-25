@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { commonService } from '../common.service';
 
 @Component({
   selector: 'app-post-video',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-video.component.css']
 })
 export class PostVideoComponent implements OnInit {
-
-  constructor() { }
-
+ 
+  constructor(private common: commonService) { }
+  userpost:any=[]
+ 
   ngOnInit(): void {
+    this.common.getuser_posts().subscribe((data) => {
+      this.userpost = data;
+     }) 
   }
 
 }

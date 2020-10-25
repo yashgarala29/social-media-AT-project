@@ -32,7 +32,7 @@ var upload = multer({ storage: storage });
 user_postRoute.post('/create',upload.single('file_uplode'),(req, res, next) => {
   console.log(req.files, req.body)
   const url=req.protocol+'://'+req.get('host')
-  console.log(req.body.file_uplode)
+  // console.log(req.body.file_uplode)
   var obj = new user_post({ 
     description: req.body.description, 
     user_id:req.body.user_id, 

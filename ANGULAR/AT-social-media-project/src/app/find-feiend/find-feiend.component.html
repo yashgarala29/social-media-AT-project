@@ -1,1 +1,23 @@
-<p>find-feiend works!</p>
+<div style="margin-bottom: 100px;">
+<div *ngFor="let post of alluser  ; let i = index">
+<div class="card" >
+    <table style="height: 70px;">
+        <tr>
+            <td style="width: 100px;">
+                <img src="" alt="" style="border-radius: 100p; left: 0%;" >
+             </td>
+            <td style="padding-left: 0;">
+                <div style="margin-left: 0%;"><a>{{post.name}}</a></div>
+            </td>    
+            <td style="width: 10px;"><form enctype="multipart/form-data">
+                <a  class="btn btn-dark "  (click)="Follow($event)" id={{post._id}} style="margin-right: 0%;display: block;" >
+                Follow
+            </a>
+        </form>
+            </td>
+        </tr>
+    </table>
+    
+</div>
+</div>
+</div>

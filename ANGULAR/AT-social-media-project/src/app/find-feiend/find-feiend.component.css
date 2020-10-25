@@ -1,0 +1,10 @@
+.button_my
+{
+    background-color: black;
+    border-radius: 1%;
+    color: white;
+    display: block;
+    height: 50%;
+    width: 10%;
+
+}

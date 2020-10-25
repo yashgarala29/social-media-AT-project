@@ -17,7 +17,7 @@ export class FirstPageComponent implements OnInit {
     // console.log(this.common.getuser_details())
     // this.userpost.reverse();
 
-    // console.log(this.userpost);
+    console.log(this.userpost);
   }
   getposts()
   {

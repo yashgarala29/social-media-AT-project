@@ -2,13 +2,14 @@
         <div class="flex-container" >
 
             <div class="box" id="box_id">
-                <form action="home.html" class="aline">
+                <form [formGroup]='validation_Form' (ngSubmit)="onSubmit_login()" class="aline">
                     <h2 style="margin-left: 30%;">Sgin in</h2>
                     <label for="username_id">Email id</label><br>
-                    <input type="text" id="username_id" placeholder="Email id..." name="username_name"><br>
+                    <input type="email" id="username_id"
+                    formControlName='username_name' placeholder="Email id..." name="username_name"><br>
                     <label for="password_id">Password </label><br>
                     <input type="password" name="password_name"
-                        placeholder="Password..." id="password_id"><br>
+                      formControlName='password_name'  placeholder="Password..." id="password_id"><br>
                     <input type="submit" class="button_class" value="sign in"><br>
                     <div style="font-size: 15px; padding: 0px; margin-top: 10px; margin-bottom: 10px ; line-height: 0px; ">Don't have account yet ?<a onclick="addimage(true)" style="color: blue; font-size: 15px; cursor: pointer;">new Account</a></div>
                     <div style="font-size: 15px; padding: 0px; margin-top: 20px; line-height: 0px;">Forgot password click <a onclick="" style="color: blue; font-size: 15px; cursor: pointer;">here</a></div>

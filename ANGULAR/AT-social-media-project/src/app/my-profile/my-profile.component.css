@@ -1,0 +1,52 @@
+@import url('../../css/nevigation.css');
+@import url('../../css/block.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+.user_image
+{
+    height: 200px;
+    width: 200px;
+    /* position:; */
+    border-radius: 300px;
+    margin-top: 10%;
+    margin-left: 5%;
+    float: left;
+}
+.follow
+{
+    margin: 10% 0 3% 2%;
+     padding-top: 10%;
+     /* padding-right: 1%; */
+    text-align: center;
+    display: block;
+    color: #f1f1f1;
+}
+.username_profile
+{
+    margin-top: 17%;
+    /* text-align; */
+    margin-left: 5%;
+    color: white;
+    float: left;
+    /* margin-right: auto; */
+    /* block-size: auto; */
+}
+.profile_view
+{
+    background: linear-gradient(to bottom,#5c6599 70%,#f1f1f1 30%);
+    /* background-size: 0; */
+}
+#username_id,#password_id,#first_name_id,#last_name_id,#re_password_id,#email_id,#date_id
+{
+    border:none;
+    border-bottom: 2px solid #0cf164;
+    background-color: initial;
+    height: 30px;
+    width: 90%;
+    padding: 2px 20px 2px 2px;
+    font-size: 20px;
+}
+.user_image_in_edit
+{
+    height: 9rem;
+    width: 9rem;
+}
