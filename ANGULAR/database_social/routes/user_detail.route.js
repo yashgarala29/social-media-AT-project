@@ -19,21 +19,39 @@ app.use(bodyParser.json())
 // Set EJS as templating engine  
 app.set("view engine", "ejs"); 
 
-// ...........................................
 
 var storage = multer.diskStorage({ 
    
 }); 
 var upload = multer({ storage: storage }); 
 user_detailRoute.post('/add_follow',upload.single('file_uplode'),(req, res, next) => {
-  console.log(req.body)
   var obj = {
     user:req.body.user,
     foll: req.body.foll
     }
-});
+    user_detail.findByIdAndUpdate(req.body.user, {
+      $push:{"following":{"followers_id":req.body.foll}}
+    }, (error, data) => {
+      if (error) {
+        return next(error);
+        console.log(error)
+      } else {
+        console.log('Data updated successfully')
+      }
+    })
 
-// ..............................................
+    user_detail.findByIdAndUpdate(req.body.foll, {
+      $push:{"followers":{"following_id":req.body.user}}
+    }, (error, data) => {
+      if (error) {
+        return next(error);
+        console.log(error)
+      } else {
+        console.log('Data updated successfully')
+      }
+    })
+
+});
 
 user_detailRoute.post('/user_authen',(req, res,next) => {
   // console.log(data.get('password_name'))
