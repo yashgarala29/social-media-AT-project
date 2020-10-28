@@ -42,12 +42,18 @@ user_authen(data):Observable<any> {
   // Get user_detail
   getuser_detail(id): Observable<any> {
     let url = `${this.userdetailUri}/read/${id}`;
-    return this.http.get(url, {headers: this.headers}).pipe(
-      map((res: Response) => {
-        return res || {}
-      }),
+    console.log(url)
+    return this.http.get(url)
+    .pipe(
       catchError(this.errorMgmt)
     )
+
+    // return this.http.get(url, {headers: this.headers}).pipe(
+    //   map((res: Response) => {
+    //     return res
+    //   }),
+    //   catchError(this.errorMgmt)
+    // )
   }
   //22222222222222222222222222
   add_followe(data): Observable<any> {
@@ -60,8 +66,9 @@ user_authen(data):Observable<any> {
 
   // Update user_detail
   updateuser_detail(id, data): Observable<any> {
+    // console.log(data.get('user_profile_photo'))
     let url = `${this.userdetailUri}/update/${id}`;
-    return this.http.put(url, data, { headers: this.headers }).pipe(
+    return this.http.put(url, data).pipe(
       catchError(this.errorMgmt)
     )
   }

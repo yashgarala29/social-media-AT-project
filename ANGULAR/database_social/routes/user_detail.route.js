@@ -21,16 +21,53 @@ app.set("view engine", "ejs");
 
 
 var storage = multer.diskStorage({ 
+  destination: (req, file, cb) => { 
+    cb(null, './uploads/user_profile_photo') 
+}, 
+filename: (req, file, cb) => { 
+  console.log(file);
+  cb(null,Date.now()+ '-' +file.originalname)
+  // req.body.file_uplode.fieldname
+    // cb(null,Date.now()+ '-' +file.fieldname ) 
+},
    
 }); 
 var upload = multer({ storage: storage }); 
+
+// Update user_detail
+user_detailRoute.route('/update/:id').put(upload.single('user_profile_photo'),(req, res, next) => {
+  console.log(req.files, req.body)
+  const url=req.protocol+'://'+req.get('host')
+
+  var obj={
+    user_profile_photo:url+'/uploads/user_profile_photo/'+req.file.filename,
+    name:req.body.name,
+    email:req.body.email,
+    password:req.body.password,
+    birthdate:req.body.birthdate,
+
+  }
+  console.log(obj.user_profile_photo)
+  user_detail.findByIdAndUpdate(req.params.id, {
+    $set: obj
+  }, (error, data) => {
+    if (error) {
+      return next(error);
+      console.log(error)
+    } else {
+      res.json(data)
+      console.log('Data updated successfully')
+    }
+  })
+})
+
 user_detailRoute.post('/add_follow',upload.single('file_uplode'),(req, res, next) => {
   var obj = {
     user:req.body.user,
     foll: req.body.foll
     }
     user_detail.findByIdAndUpdate(req.body.user, {
-      $push:{"following":{"followers_id":req.body.foll}}
+      $push:{"following":{"following_id":req.body.foll}}
     }, (error, data) => {
       if (error) {
         return next(error);
@@ -41,7 +78,7 @@ user_detailRoute.post('/add_follow',upload.single('file_uplode'),(req, res, next
     })
 
     user_detail.findByIdAndUpdate(req.body.foll, {
-      $push:{"followers":{"following_id":req.body.user}}
+      $push:{"followers":{"followers_id":req.body.user}}
     }, (error, data) => {
       if (error) {
         return next(error);
@@ -94,6 +131,7 @@ user_detailRoute.route('/').get((req, res) => {
 
 // Get single user_detail
 user_detailRoute.route('/read/:id').get((req, res) => {
+  console.log(req.params.id)
   user_detail.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error)
@@ -104,22 +142,6 @@ user_detailRoute.route('/read/:id').get((req, res) => {
 })
 
 
-// Update user_detail
-user_detailRoute.route('/update/:id').put((req, res, next) => {
-
-
-  user_detail.findByIdAndUpdate(req.params.id, {
-    $set: req.body
-  }, (error, data) => {
-    if (error) {
-      return next(error);
-      console.log(error)
-    } else {
-      res.json(data)
-      console.log('Data updated successfully')
-    }
-  })
-})
 // Delete user_detail
 user_detailRoute.route('/delete/:id').delete((req, res, next) => {
   user_detail.findOneAndRemove(req.params.id, (error, data) => {

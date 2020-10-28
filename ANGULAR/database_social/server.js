@@ -33,6 +33,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors()); 
 // app.use('/uploads', express.static('public'));
 app.use('/uploads', express.static('./uploads'));
+app.use('/uploads/user_profile_photo', express.static('./uploads/user_profile_photo'));
 app.use(express.static(path.join(__dirname, 'dist/social-media')));
 app.use('/', express.static(path.join(__dirname, 'dist/social-media')));
 app.use('/user_detail', user_detailRoute);

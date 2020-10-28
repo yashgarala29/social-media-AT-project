@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema
 let user_detail = new Schema({
+   user_profile_photo:
+   {
+      type:String
+      
+   },
    name: {
       type: String
    },

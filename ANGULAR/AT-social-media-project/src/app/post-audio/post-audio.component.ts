@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { commonService } from '../common.service';
+
 @Component({
   selector: 'app-post-audio',
   templateUrl: './post-audio.component.html',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostAudioComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private common: commonService) { }
+  userpost:any=[]
+ 
   ngOnInit(): void {
+    this.common.getuser_posts().subscribe((data) => {
+      this.userpost = data;
+     }) 
   }
 
 }

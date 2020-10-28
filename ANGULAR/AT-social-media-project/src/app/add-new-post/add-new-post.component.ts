@@ -48,6 +48,7 @@ export class AddNewPostComponent implements OnInit,AfterViewInit{
   }
   onSubmit() {
     this.submitted = true;
+    console.log(this.new_user_post.get('file_uplode').value);
     const formData = new FormData();
     formData.append('file_uplode', this.new_user_post.get('file_uplode').value);
     formData.append('description', this.new_user_post.get('description').value); 
