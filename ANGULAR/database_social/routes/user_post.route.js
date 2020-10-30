@@ -28,6 +28,19 @@ var storage = multer.diskStorage({
    
 }); 
 var upload = multer({ storage: storage }); 
+
+// friendread
+user_postRoute.route('/friendread/:id').get((req, res) => {
+  console.log(re.params.id)
+  user_post.find({"user_id" : req.params.id}, (error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      res.json(data)
+    }
+  })
+})
+
 // .route('/create')
 user_postRoute.post('/create',upload.single('file_uplode'),(req, res, next) => {
   console.log(req.files, req.body)

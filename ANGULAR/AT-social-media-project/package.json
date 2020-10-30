@@ -24,6 +24,7 @@
     "@angular/router": "~10.1.2",
     "@okta/jwt-verifier": "1.0.0",
     "@types/jquery": "^3.5.3",
+    "angular-xml": "^2.2.5",
     "angular2-cookie": "^1.2.6",
     "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-alpha2",

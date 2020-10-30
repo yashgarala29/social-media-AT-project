@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { NavigationBarComponent } from '../navigation-bar/navigation-bar.component';
 
 @Component({
@@ -9,7 +10,7 @@ import { NavigationBarComponent } from '../navigation-bar/navigation-bar.compone
 export class HomePageComponent implements OnInit {
   addClass:boolean=false
   class_name:string="text-dark"
-  constructor() { }
+  constructor(private cookie:CookieService) { }
 
   ngOnInit(): void {
   }
@@ -60,6 +61,11 @@ export class HomePageComponent implements OnInit {
   contact_us()
   {
     
+  }
+  logout()
+  {
+    this.cookie.delete('login_user_id');
+    window.location.reload()
   }
 
 }

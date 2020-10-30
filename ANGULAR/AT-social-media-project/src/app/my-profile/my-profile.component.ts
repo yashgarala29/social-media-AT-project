@@ -20,6 +20,7 @@ export class MyProfileComponent implements OnInit {
   re_password_name:any;
   email_name:any;
   date_name:any;
+  change=false;
   constructor(private elementRef: ElementRef,
     public fb:FormBuilder,
     private router:Router,
@@ -54,6 +55,7 @@ export class MyProfileComponent implements OnInit {
   {
       this.user_profile_photo=event.target.files[0];
       console.log(this.user_profile_photo)
+      this.change=true
   }
   
   onSubmit()
@@ -61,6 +63,8 @@ export class MyProfileComponent implements OnInit {
     console.log(this.email_name)
     this.submitted = true;
     const formData = new FormData();
+    
+    formData.append('change',String(this.change));
     formData.append('user_profile_photo',this.user_profile_photo);
     formData.append('name', this.first_name); 
     formData.append('_id', this.co.get('login_user_id')); 
@@ -72,6 +76,8 @@ export class MyProfileComponent implements OnInit {
       this.commonservice.updateuser_detail(this.co.get('login_user_id'),formData).subscribe(
         (res) => {
           console.log('user detail  successfully created!')
+          
+          window.location.reload();
           // window.location.reload();
           // this.ngZone.run(() => this.router.navigateByUrl('/aa'))
         }, (error) => {

@@ -34,20 +34,64 @@ filename: (req, file, cb) => {
 }); 
 var upload = multer({ storage: storage }); 
 
+// unfollowe
+user_detailRoute.route('/unfollowe').post(upload.single('user_profile_photo'),(req, res, next) => {
+  var obj = {
+    user:req.body.user,
+    foll: req.body.foll
+    }
+    user_detail.findByIdAndUpdate(req.body.user, {
+      $pull:{"following":{"following_id":req.body.foll}}
+    }, (error, data) => {
+      if (error) {
+        return next(error);
+        console.log(error)
+      } else {
+        console.log('Data updated successfully')
+      }
+    })
+
+    user_detail.findByIdAndUpdate(req.body.foll, {
+      $pull:{"followers":{"followers_id":req.body.user}}
+    }, (error, data) => {
+      if (error) {
+        return next(error);
+        console.log(error)
+      } else {
+        console.log('Data updated successfully')
+      }
+    })
+
+  
+
+})
 // Update user_detail
 user_detailRoute.route('/update/:id').put(upload.single('user_profile_photo'),(req, res, next) => {
-  console.log(req.files, req.body)
+  
   const url=req.protocol+'://'+req.get('host')
-
-  var obj={
-    user_profile_photo:url+'/uploads/user_profile_photo/'+req.file.filename,
-    name:req.body.name,
-    email:req.body.email,
-    password:req.body.password,
-    birthdate:req.body.birthdate,
-
+  var obj
+  if(req.body.change=='true')
+  {
+    obj={
+      user_profile_photo:url+'/uploads/user_profile_photo/'+req.file.filename ,
+      name:req.body.name,
+      email:req.body.email,
+      password:req.body.password,
+      birthdate:req.body.birthdate,
+      }
+    console.log("req.file.filename")
   }
-  console.log(obj.user_profile_photo)
+  else
+  {
+    obj={
+      name:req.body.name,
+      email:req.body.email,
+      password:req.body.password,
+      birthdate:req.body.birthdate,
+      }
+  }
+   
+  console.log(obj)
   user_detail.findByIdAndUpdate(req.params.id, {
     $set: obj
   }, (error, data) => {

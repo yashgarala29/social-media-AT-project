@@ -1,1 +1,23 @@
-<p>myfriend works!</p>
+<div style="margin-bottom: 100px;">
+    <div *ngFor="let post of myfriend  ; let i = index">
+    <div class="card" >
+        <table style="height: 70px;">
+            <tr>
+                <td style="width: 100px;">
+                    <img src="{{post.user_profile_photo}}" alt="44" style="border-radius: 100p; left: 0%;" >
+                 </td>
+                <td style="padding-left: 0;">
+                    <div style="margin-left: 0%;"><a>{{post.name}}</a></div>
+                </td>    
+                <td style="width: 10px;"><form enctype="multipart/form-data">
+                    <a  class="btn btn-dark "  (click)="unFollow($event)"  id={{post._id}} style="margin-right: 0%;display: block;" >
+                    unFollow
+                </a>
+            </form>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </div>
+    </div>

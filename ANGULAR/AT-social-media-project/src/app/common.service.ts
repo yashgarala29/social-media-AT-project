@@ -14,8 +14,29 @@ export class commonService {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
+ 
+  
 //--------------------- user_detail----------------------------
+// getfriendpost
+getfriendpost(id): Observable<any> {
+  let url = `${this.userpostUri}/friendread/${id}`;
+  // console.log(url)
+  // console.log("this.http.get(url)"+this.http.get(url))
+  return this.http.get(url)
+  .pipe(
+    catchError(this.errorMgmt)
+  )
+
+}
 // authentication
+add_unfollowe(data):Observable<any> {
+    let url = `${this.userdetailUri}/unfollowe`;
+    // console.log(data.getAll())
+    return this.http.post(url,data)
+      .pipe(
+        catchError(this.errorMgmt)
+      )
+}
 user_authen(data):Observable<any> {
   let url = `${this.userdetailUri}/user_authen`;
   // console.log(data.getAll())
@@ -35,14 +56,14 @@ user_authen(data):Observable<any> {
 
   // Get all user_details
   getuser_details() {
-    console.log("this.http.get(`${this.userdetailUri}`)"+this.http.get(`${this.userdetailUri}`))
+    // console.log("this.http.get(`${this.userdetailUri}`)"+this.http.get(`${this.userdetailUri}`))
     return this.http.get(`${this.userdetailUri}`);
   }
 
   // Get user_detail
   getuser_detail(id): Observable<any> {
     let url = `${this.userdetailUri}/read/${id}`;
-    console.log(url)
+    // console.log(url)
     return this.http.get(url)
     .pipe(
       catchError(this.errorMgmt)
@@ -58,7 +79,7 @@ user_authen(data):Observable<any> {
   //22222222222222222222222222
   add_followe(data): Observable<any> {
     let url = `${this.userdetailUri}/add_follow`;
-    console.log(data.get('foll'))
+    // console.log(data.get('foll'))
     return this.http.post(url,data).pipe(
       catchError(this.errorMgmt)
     )

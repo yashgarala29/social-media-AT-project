@@ -1,0 +1,10 @@
+
+.header
+{
+    background: linear-gradient(to right  , #5c6599 ,#7d71aa ) !important;
+    /* max-height: 100px; */
+    padding: 60px;
+    text-align: center;
+    color:white;
+  font-size: 30px;
+}

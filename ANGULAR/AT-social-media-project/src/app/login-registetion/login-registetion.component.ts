@@ -79,6 +79,7 @@ export class LoginRegistetionComponent implements OnInit,AfterViewInit  {
       console.log("inside if");
       return false;
     } else {
+      console.log(this.validation_Form.get('username_name'))
       this.auth=this.commonservice.user_authen(this.validation_Form.value).subscribe(
        
         (res) => {

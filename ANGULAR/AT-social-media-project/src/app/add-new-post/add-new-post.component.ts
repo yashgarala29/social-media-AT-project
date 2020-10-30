@@ -63,6 +63,7 @@ export class AddNewPostComponent implements OnInit,AfterViewInit{
       this.commonservice.createuser_post(formData).subscribe(
         (res) => {
           console.log('user detail  successfully created!')
+          window.location.reload();
           // window.location.reload();
           // this.ngZone.run(() => this.router.navigateByUrl('/aa'))
         }, (error) => {
