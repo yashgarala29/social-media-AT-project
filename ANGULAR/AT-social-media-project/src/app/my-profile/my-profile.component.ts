@@ -63,7 +63,8 @@ export class MyProfileComponent implements OnInit {
     console.log(this.email_name)
     this.submitted = true;
     const formData = new FormData();
-    
+    this.co.set("login_user_name",this.first_name,50000)
+            
     formData.append('change',String(this.change));
     formData.append('user_profile_photo',this.user_profile_photo);
     formData.append('name', this.first_name); 
